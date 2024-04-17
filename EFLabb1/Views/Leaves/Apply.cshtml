@@ -1,0 +1,33 @@
+﻿@model Leave
+
+
+
+<form asp-action="Apply" method="post">
+	<div class="form-group">
+		<label asp-for="FkEmployee">Employee</label>
+		<select asp-for="FkEmployee" asp-items="@ViewBag.Employees" class="form-control">
+			<option value=""> Chose from the list--</option>
+		</select>
+	</div>
+
+	<div class="form-group">
+		<label asp-for="StartDate">StartDate</label>
+		<input asp-for="StartDate" class="form-cotrol" />
+	</div>
+
+	<div class="form-group">
+		<label asp-for="EndDate">EndDate</label>
+		<input asp-for="EndDate" class="form-cotrol" />
+	</div>
+
+	<div class="form-group">
+		<label asp-for="Type">Type of leave</label>
+		<select asp-for="Type" class="form-control">
+			<option value="Vacation">Vacation</option>
+			<option value="Sick day">Sick day</option>
+			<option value="Personal">Personal</option>
+			<option value="VAB">VAB</option>
+		</select>
+	</div>
+	<button type="submit" class="btn  btn-primary">Apply</button>
+</form>
